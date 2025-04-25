@@ -40,6 +40,9 @@
     alacritty
     tmux
 
+    # Other
+    lazygit
+
     # Fonts
     pkgs.nerd-fonts.jetbrains-mono
 
