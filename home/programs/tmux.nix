@@ -17,7 +17,6 @@
             set -g @tokyo-night-tmux_battery_name "BAT0"
             set -g @tokyo-night-tmux_battery_low_threshold 21
             set -g @tokyo-night-tmux_show_hostname 0
-            set -g @tokyo-night-tmux_terminal_icon
             set -g @tokyo-night-tmux_show_datetime 0
             set -g @tokyo-night-tmux_show_path 1
             set -g @tokyo-night-tmux_path_format relative
