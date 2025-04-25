@@ -43,7 +43,7 @@ in
         { name = "Aloxaf/fzf-tab"; }
       ];
     };
-    initExtra = ''
+    initContent = ''
       ZSH_DISABLE_COMPFIX=true
       export EDITOR=nvim
 
