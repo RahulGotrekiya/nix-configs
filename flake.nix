@@ -1,9 +1,10 @@
 {
-  description = "My first flake!";
+  description = "My NixOS configuration";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/master";  
+    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
    outputs = { self, nixpkgs, home-manager, ... }:
@@ -15,13 +16,13 @@
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration.nix ];
+          modules = [ ./nixos/configuration.nix ];
         };
       };
       homeConfigurations = {
         rahul = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ ./home.nix ];
+          modules = [ ./home/home.nix ];
         };
       };
     };

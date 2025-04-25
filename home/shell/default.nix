@@ -113,6 +113,6 @@ in
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = true;
-    settings = builtins.fromTOML (builtins.unsafeDiscardStringContext (builtins.readFile ./ohmyposh.toml));
+    settings = builtins.fromTOML (builtins.unsafeDiscardStringContext (builtins.readFile ../themes/ohmyposh.toml));
   };
 }

@@ -3,7 +3,8 @@
 {
 
   imports = [
-    ./sh.nix
+    ./shell/default.nix
+    ./programs
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -32,6 +33,11 @@
     oh-my-posh
     bat
     fzf
+    pkgs.nerd-fonts.jetbrains-mono
+
+    # Terminal
+    alacritty
+
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -84,4 +90,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+  programs.zsh.enable = true;
+
 }
