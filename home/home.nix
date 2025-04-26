@@ -42,6 +42,7 @@
 
     # Other
     lazygit
+    telegram-desktop
 
     # Fonts
     pkgs.nerd-fonts.jetbrains-mono
