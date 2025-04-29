@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/users.nix
     ];
 
   # Bootloader.
@@ -18,9 +19,9 @@
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
-  environment.shells = with pkgs; [ zsh ];
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
+  # environment.shells = with pkgs; [ zsh ];
+  # users.defaultUserShell = pkgs.zsh;
+  # programs.zsh.enable = true;
   
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -56,6 +57,10 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "rahul";
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -86,15 +91,15 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.rahul = {
-    isNormalUser = true;
-    description = "Rahul Gotrekiya";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.zsh;
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
+  # users.users.rahul = {
+  #   isNormalUser = true;
+  #   description = "Rahul Gotrekiya";
+  #   extraGroups = [ "networkmanager" "wheel" ];
+  #   shell = pkgs.zsh;
+  #   packages = with pkgs; [
+  #   #  thunderbird
+  #   ];
+  # }
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -113,6 +118,7 @@
      tree
      spice-vdagent
      spice-gtk
+     vscodium
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
