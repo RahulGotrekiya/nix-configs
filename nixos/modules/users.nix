@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  # Shell configuration
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+  
   # Define user accounts
   users.users.rahul = {
     isNormalUser = true;
@@ -12,12 +17,4 @@
     ];
   };
 
-  # Shell configuration
-  environment.shells = with pkgs; [ zsh ];
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
-
-  # Enable automatic login for the user.
-# services.displayManager.autoLogin.enable = true;
-# services.displayManager.autoLogin.user = "rahul";
 }
