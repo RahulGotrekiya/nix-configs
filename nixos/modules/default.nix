@@ -8,5 +8,6 @@
     ./packages.nix
     ./users.nix
     ./networking.nix
+    ./flatpak.nix
   ];
 }
