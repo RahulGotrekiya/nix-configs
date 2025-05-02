@@ -65,7 +65,7 @@ in
   '';
 
   # Set cursor theme for SDDM (KDE)
-  services.xserver.displayManager.sddm.settings = {
+  services.displayManager.sddm.settings = {
     Theme = {
       CursorTheme = "Bibata-Original-Classic";
     };
