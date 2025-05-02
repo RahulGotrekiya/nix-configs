@@ -45,6 +45,8 @@ in
   services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
     [org.gnome.shell]
     welcome-dialog-last-shown-version='9999999999'
+    [org.gnome.desktop.interface]
+    cursor-theme='Bibata-Original-Classic'
   '';
 
   # KDE configuration
@@ -55,6 +57,24 @@ in
   environment.systemPackages = 
     (if desktopEnvironment == "gnome" then gnomeApps else []) ++
     (if desktopEnvironment == "kde" then kdeApps else []);
+
+  # Set Bibata cursor as default system-wide
+  environment.etc."gtk-3.0/settings.ini".text = ''
+    [Settings]
+    gtk-cursor-theme-name=Bibata-Original-Classic
+  '';
+
+  # Set cursor theme for SDDM (KDE)
+  services.xserver.displayManager.sddm.settings = {
+    Theme = {
+      CursorTheme = "Bibata-Original-Classic";
+    };
+  };
+
+  # Set cursor theme for X11
+  services.xserver.displayManager.sessionCommands = ''
+    ${pkgs.xorg.xsetroot}/bin/xsetroot -xcf ${pkgs.bibata-cursors}/share/icons/Bibata-Original-Classic/cursors/left_ptr 24
+  '';
 
   # Desktop environment customizations
   programs = {
@@ -78,5 +98,8 @@ in
   environment.sessionVariables = {
     # For Electron apps to use Wayland
     NIXOS_OZONE_WL = "1";
+    # Set cursor theme for Wayland
+    XCURSOR_THEME = "Bibata-Original-Classic";
+    XCURSOR_SIZE = "24";
   };
 }

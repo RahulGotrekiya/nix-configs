@@ -13,6 +13,7 @@
     spice-vdagent
     spice-gtk
     vscodium
+    bibata-cursors
   ];
 
   # Install firefox.
