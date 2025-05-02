@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  imports = [
+    ./hyprpaper.nix
+    ./hypr
+  ];  
+}
+

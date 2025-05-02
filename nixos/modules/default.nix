@@ -9,5 +9,6 @@
     ./users.nix
     ./networking.nix
     ./flatpak.nix
+    ./wm.nix 
   ];
 }
