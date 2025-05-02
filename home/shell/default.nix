@@ -4,6 +4,7 @@ let
   myAliases = {
     v = "nvim";
     c = "clear";
+    lg = "lazygit";
     ls = "eza --icons";
     lsa = "eza -a --icons";
     ld = "eza -lD --icons";
