@@ -17,5 +17,6 @@
     brightnessctl
     pulseaudio # For pactl
     playerctl
+    libnotify
   ];
 }
