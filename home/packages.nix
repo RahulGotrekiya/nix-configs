@@ -23,6 +23,7 @@
     # Other
     lazygit
     telegram-desktop
+    btop
 
     # Fonts
     pkgs.nerd-fonts.jetbrains-mono

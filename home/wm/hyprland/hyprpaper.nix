@@ -7,11 +7,11 @@
       splash_offset = 2.0;
       splash = false;
       preload = [
-        "/home/rahul/Downloads/wallpaper.jpg"
+        "/home/rahul/Downloads/wallpaper.png"
       ];
 
       wallpaper = [
-        ",/home/rahul/Downloads/wallpaper.jpg"
+        ",/home/rahul/Downloads/wallpaper.png"
       ];
     };
   };

@@ -4,6 +4,7 @@
   wayland.windowManager.hyprland.settings = {
     # Startup programs
     exec-once = [
+      "launch-waybar"
       "wl-paste --type text --watch cliphist store"
       "wl-paste --type image --watch cliphist store"
       "powernotd"
