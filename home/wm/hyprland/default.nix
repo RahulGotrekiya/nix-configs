@@ -5,7 +5,8 @@
     ./hyprpaper.nix
     ./hypr
     ./waybar
-    ./mako.nix
+    # ./mako.nix
+    ./swaync.nix
   ];  
 }
 

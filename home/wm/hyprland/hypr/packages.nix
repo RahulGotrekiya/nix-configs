@@ -18,5 +18,6 @@
     pulseaudio # For pactl
     playerctl
     libnotify
+    swaynotificationcenter
   ];
 }

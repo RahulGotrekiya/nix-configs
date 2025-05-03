@@ -27,6 +27,10 @@
       "$mainMod SHIFT, E, exec, nautilus"
       "$mainMod SHIFT, Delete, exit"
 
+      "SUPER, N, exec, swaync-client -t -sw" 
+      "SUPER SHIFT, N, exec, swaync-client -C -sw"
+      "SUPER CTRL, N, exec, swaync-client -d -sw"
+
       # Custom scripts
       "$mainMod, G, exec, ~/.config/waybar/scripts/toggle"
       "$mainMod SHIFT, G, exec, ~/.config/waybar/scripts/launch.sh"

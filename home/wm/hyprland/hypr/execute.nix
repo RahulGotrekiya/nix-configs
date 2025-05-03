@@ -10,7 +10,8 @@
       "powernotd"
       "hyprpaper"
       "pypr"
-      "mako &"
+      # "mako &"
+      "swaync"
       "hyprctl setcursor \"Bibata-Original-Classic\" 35"
     ];
 
