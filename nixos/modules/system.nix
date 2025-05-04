@@ -7,6 +7,10 @@
   boot.loader.grub.devices = [ "nodev" ];
   boot.loader.grub.efiSupport = true; 
   boot.loader.grub.useOSProber = true;
+  boot.kernelParams = [
+    "quiet"
+    "loglevel=3"
+  ];
 
   # Set time zone
   time.timeZone = "Asia/Kolkata";
