@@ -6,6 +6,7 @@
     ./shell/default.nix
     ./packages.nix
     ./programs
+    ./desktop
     ./wm
   ];
 
