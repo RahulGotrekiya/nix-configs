@@ -22,8 +22,10 @@
     btop
 
     # Fonts
+    inter
     pkgs.nerd-fonts.jetbrains-mono
     google-fonts
+    (google-fonts.override { fonts = [ "Bricolage Grotesque" ]; })
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
