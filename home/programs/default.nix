@@ -7,5 +7,6 @@
     ./git.nix
     ./tmux.nix
     ./kitty.nix
+    ./kanata.nix
   ];
 }

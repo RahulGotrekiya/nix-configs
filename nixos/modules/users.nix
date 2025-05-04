@@ -10,11 +10,15 @@
   users.users.rahul = {
     isNormalUser = true;
     description = "Rahul Gotrekiya";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ 
+      "networkmanager"
+      "wheel"
+      "input"     # Add input group for Kanata
+      "uinput"    # Add uinput group for Kanata
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       # thunderbird
     ];
   };
-
 }

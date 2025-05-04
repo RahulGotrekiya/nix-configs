@@ -9,6 +9,7 @@
     ./networking.nix
     ./flatpak.nix
     ./wm.nix 
-    ./desktop
+    ./kanata.nix
+    ./desktop    
   ];
 }
