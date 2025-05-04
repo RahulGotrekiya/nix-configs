@@ -100,15 +100,26 @@ in
       };
 
       "org/gnome/desktop/background" = {
-        picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/amber-l.jxl";
-        picture-uri-dark = "file:///run/current-system/sw/share/backgrounds/gnome/amber-d.jxl";
+        picture-uri = "file://${config.home.homeDirectory}/dotfiles/home/themes/wallpapers/wall.jpg";
+        picture-uri-dark = "file://${config.home.homeDirectory}/dotfiles/home/themes/wallpapers/wall.jpg";
       };
       "org/gnome/desktop/screensaver" = {
-        picture-uri = "file:///run/current-system/sw/share/backgrounds/gnome/amber-l.jxl";
+        picture-uri = "file://${config.home.homeDirectory}/dotfiles/home/themes/wallpapers/wall.jpg";
         primary-color = "#ff7800";
         secondary-color = "#000000";
       };
 
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+        gtk-theme = "Adwaita-dark";
+        icon-theme = "Adwaita";
+        cursor-theme = "Bibata-Original-Classic";
+      };
+
+      "org/gnome/shell/extensions/user-theme" = {
+        name = "Adwaita-dark"; 
+      };
+      
       # Enable Num Lock on boot
       "org/gnome/settings-daemon/peripherals/keyboard" = {
         numlock-state = "on";
