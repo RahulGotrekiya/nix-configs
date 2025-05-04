@@ -10,7 +10,7 @@
   users.users.rahul = {
     isNormalUser = true;
     description = "Rahul Gotrekiya";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       # thunderbird

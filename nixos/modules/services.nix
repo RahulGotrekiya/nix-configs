@@ -21,8 +21,6 @@
   };
 
   # List services that you want to enable:
-  services.spice-vdagentd.enable = true;
-
   
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
