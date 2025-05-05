@@ -32,8 +32,7 @@
       "SUPER CTRL, N, exec, swaync-client -d -sw"
 
       # Custom scripts
-      "$mainMod, G, exec, ~/.config/waybar/scripts/toggle"
-      "$mainMod SHIFT, G, exec, ~/.config/waybar/scripts/launch.sh"
+      "$mainMod, G, exec, pkill waybar || waybar"
       "$mainMod SHIFT, T, exec, hyprctl dispatch workspaceopt allfloat"
       "$mainMod SHIFT, P, exec, $scrPath/windowpin.sh"
       "$mainMod Alt, G, exec, $scrPath/gamemode.sh"

@@ -12,7 +12,7 @@
     pavucontrol         # For audio control
     (writeScriptBin "launch-waybar" ''
       #!${pkgs.bash}/bin/bash
-      ${pkgs.killall}/bin/killall -9 waybar
+      ${pkgs.psmisc}/bin/killall -9 waybar
       ${pkgs.waybar}/bin/waybar &
     '')
   ];
