@@ -11,6 +11,11 @@
       pull.rebase = false;
       push.autoSetupRemote = true;
       core.editor = "nvim";
+      safe = {
+        directory = [
+          "/mnt/work/personal/Obsidian Vault"
+        ];
+      };
     };
     
     # signing = {

@@ -11,6 +11,7 @@
     ./wm.nix 
     ./kanata.nix
     ./nvidia.nix
+    ./filesystems.nix
     ./desktop    
   ];
 }
