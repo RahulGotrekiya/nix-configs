@@ -10,6 +10,12 @@
 
   # Install required system packages for Hyprland
   environment.systemPackages = with pkgs; [
+    # For GPU stats and management
+    glxinfo
+    
+    # For power management
+    powertop
+
     # Notification daemon
     mako
     
@@ -62,6 +68,7 @@
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     GDK_BACKEND = "wayland,x11";
+    HYPRLAND_LOG_WLR = "1";
   };
 
   # Auto-start Polkit agent

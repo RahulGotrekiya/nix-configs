@@ -10,6 +10,7 @@
     ./flatpak.nix
     ./wm.nix 
     ./kanata.nix
+    ./nvidia.nix
     ./desktop    
   ];
 }

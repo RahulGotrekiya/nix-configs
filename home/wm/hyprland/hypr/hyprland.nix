@@ -1,15 +1,12 @@
-# Configuration for Hyprland in Home Manager
-
 { config, lib, pkgs, ... }:
 
 {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-    xwayland.enable = true;  # Enable Xwayland
+    xwayland.enable = true;
 
     settings = {
-      # Monitor configuration
       monitor = ",1920x1080@144,auto,1";
       
       # Input configuration
@@ -83,5 +80,43 @@
         disable_splash_rendering = true;
       };      
     };
+
+    extraConfig = ''
+      # NVIDIA-specific environment variables for Hyprland
+      env = LIBVA_DRIVER_NAME,iHD
+      env = GBM_BACKEND,nvidia-drm
+      env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+      env = WLR_NO_HARDWARE_CURSORS,1
+      
+      # Graphics settings (hardware acceleration)
+      env = XCURSOR_SIZE,24
+      env = WLR_RENDERER,vulkan
+      
+      # For better performance
+      misc {
+        vfr = true
+        vrr = 1
+        disable_hyprland_logo = true
+        disable_splash_rendering = true
+        mouse_move_enables_dpms = true
+        enable_swallow = true
+        new_window_takes_over_fullscreen = 2
+      }
+      
+      # NVIDIA GPU rules for graphics performance
+      group {
+        groupbar {
+          font_size = 16
+          gradients = false
+        }
+      }
+      
+      # Better compatibility with hybrid graphics
+      env = XDG_SESSION_TYPE,wayland
+      env = QT_QPA_PLATFORM,wayland
+      env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
+      env = MOZ_ENABLE_WAYLAND,1
+      env = NIXOS_OZONE_WL,1
+    '';
   };
 }
