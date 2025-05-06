@@ -8,9 +8,16 @@
       modules-left = [
         "clock"
         "hyprland/workspaces"
+        # "custom/weather"
+        # "wlr/taskbar"
         "mpris"
       ];
       modules-right = [
+        # "cpu"
+        # "memory"
+        # "temperature"
+        # "custom/gpu-temp"
+        "custom/gpu-util"
         "tray"
         "network"
         "pulseaudio"
@@ -26,7 +33,7 @@
       };
 
       "clock" = {
-        format = "<span>   </span><span>{:%I:%M %a %d}</span>";
+        format = "<span foreground='#7aa2f7'>   </span><span>{:%I:%M %a %d}</span>";
         tooltip-format = "{calendar}";
         calendar = {
           mode = "month";
@@ -42,30 +49,32 @@
           };
         };
         actions = {
-          "on-click-middle" = "mode";
-          "on-click-right" = "shift_up";
-          "on-click" = "shift_down";
+          on-click-middle = "mode";
+          on-click-right = "shift_up";
+          on-click = "shift_down";
         };
+        format-alt = "<span foreground='#89dceb'>  </span><span>{:%H:%M}</span>";
       };
 
       "cpu" = {
         format = "<span foreground='#b8bb26'>Cpu: </span> {usage}%";
+        on-click = "${config.home.homeDirectory}/.config/waybar/scripts/gpu-util";
       };
 
       "memory" = {
-        format = "<span foreground='#d65d9e'>  </span> {}%";
+        format = "<span foreground='#d65d9e'>  </span> {}%";
         interval = 1;
       };
 
       "custom/gpu-util" = {
         exec = "${config.home.homeDirectory}/.config/waybar/scripts/gpu-util";
-        format = "<span foreground='#67b0e8'>󰯿</span> {}";
+        format = "<span foreground='#67b0e8'>󰢮  </span> {}";
         interval = 1;
       };
 
       "custom/gpu-temp" = {
         exec = "${config.home.homeDirectory}/.config/waybar/scripts/gpu-temp";
-        format = "<span foreground='#e57474'></span> {}";
+        format = "<span foreground='#e57474'> </span> {}";
         interval = 1;
       };
 
@@ -80,7 +89,7 @@
       "temperature" = {
         "hwmon-path" = "/sys/class/hwmon/hwmon1/temp1_input";
         critical-threshold = 80;
-        format = "<span foreground='#83a598'> </span> {temperatureC}°C";
+        format = "<span foreground='#83a598'> </span> {temperatureC}°C";
         interval = 1;
       };
 
@@ -109,15 +118,15 @@
         format = "<span foreground='#cc6666'>{icon}</span>   {percent}%";
         "tooltip-format" = "{icon}   {percent}%";
         format-icons = [
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
-          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
+          ""
         ];
       };
 
@@ -129,7 +138,7 @@
         };
         format = "{icon}  {capacity}%";
         "format-charging" = "<span color='#c3e88d'>󱐋</span>  {capacity}%";
-        "format-plugged" = "  {capacity}%";
+        "format-plugged" = "  {capacity}%";
         "tooltip-format" = "{time} left";
         format-icons = [
           "󰁺"
@@ -163,7 +172,7 @@
         "tooltip-format-ethernet" = "󰈀  {ifname} ({signalStrength}%)";
         "tooltip-format-disconnected" = "Disconnected";
         "on-click" = "nm-applet";
-        "on-click-right" = "killall nm-applet";
+        "on-click-right" = "pkill nm-applet";
         "max-length" = 50;
       };
 
@@ -175,12 +184,12 @@
         "on-click-right" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
         "ignored-sinks" = [ "Easy Effects Sink" ];
         "format-icons" = {
-          headphone = "  ";
-          "hands-free" = "  ";
+          headphone = "  ";
+          "hands-free" = "  ";
           headset = "󰋎 ";
-          phone = " ";
-          portable = " ";
-          car = "";
+          phone = " ";
+          portable = " ";
+          car = " ";
           default = [
             "󰕿"
             "󰖀"
@@ -198,7 +207,7 @@
           mpv = "🎵";
         };
         "status-icons" = {
-          paused = "<span foreground='#E46876'></span>";
+          paused = "<span foreground='#E46876'> </span>";
         };
         "max-length" = 20;
         interval = 1;
@@ -206,13 +215,13 @@
 
       "tray" = {
         format = "<span foreground='#D3C6AA'>{icon}</span>";
-        "icon-size" = 14;
+        icon-size = 14;
         spacing = 5;
       };
 
       "idle_inhibitor" = {
         format = "{icon}";
-        "format-icons" = {
+        format-icons = {
           activated = "󱠛 ";
           deactivated = "󱤱 ";
         };
@@ -231,7 +240,7 @@
         };
         rewrite = {
           "Firefox Web Browser" = "Firefox";
-          "Foot Server" = "Terminal";
+          "Kitty" = "Terminal";
         };
       };
 

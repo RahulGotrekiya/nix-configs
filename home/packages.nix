@@ -21,6 +21,7 @@
     telegram-desktop
     btop
     vscode
+    libnotify
     
     # Fonts
     inter

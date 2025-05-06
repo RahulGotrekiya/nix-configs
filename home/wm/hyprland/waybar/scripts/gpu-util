@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+gpu_id=0  # Change this to the desired GPU ID (e.g., 0, 1, 2, etc.)
 
 # Get GPU utilization using nvidia-smi and extract the percentage
 gpu_utilization=$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)
+gpu_temperature=$(nvidia-smi --id=${gpu_id} --query-gpu=temperature.gpu --format=csv,noheader,nounits)
 
-echo "${gpu_utilization}%"
+echo "${gpu_utilization}%  -  ${gpu_temperature}°C"
 

@@ -3,8 +3,9 @@
   config,
   lib,
   ...
-}: {
-  # Enable SwayNotificationCenter
+}: 
+
+{
   services.swaync = {
     enable = true;
     
@@ -120,8 +121,8 @@
     style = ''
       /* General styling */
       * {
-        font-family: "JetBrainsMono Nerd Font";
-        font-size: 20px;
+        font-family: "Bricolage Grotesque";
+        font-size: 18px;
       }
 
       .control-center {
@@ -205,21 +206,21 @@
       }
 
       .summary {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         color: #c0caf5;
         margin: 0px;
       }
 
       .time {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: normal;
         color: #7aa2f7;
         margin: 0px;
       }
 
       .body {
-        font-size: 13px;
+        font-size: 15px;
         font-weight: normal;
         color: #a9b1d6;
         margin: 10px 0px 0px;

@@ -28,7 +28,7 @@
       min-height: 0;
       margin: 0;
       padding: 0;
-      border-radius: 7px;
+      border-radius: 3px;
       /* font-family: "Space Grotesk"; */
       font-family: "Bricolage Grotesque";
       font-size: 14pt;
@@ -107,10 +107,10 @@
     }
 
     #custom-gpu-util {
-      margin: 5px 5px 2px 5px;
+      margin: 5px 0px 2px 5px;
       padding-left: 10px;
       padding-right: 10px;
-      border-radius: 7px;
+      border-radius: 3px;
       background-color: @bg;
       color: @fg;
     }
@@ -124,7 +124,7 @@
     }
 
     #tray {
-      margin: 5px 5px 2px 5px;
+      margin: 5px 0px 2px 5px;
       border-radius: 3px;
       padding-left: 10px;
       padding-right: 10px;
@@ -259,23 +259,33 @@
     }
 
     #taskbar {
-      border-radius: 0px 8px 8px 0;
-      padding: 0 3px;
-      margin: 0 0px;
-      color: #ffffff;
-      background-color: rgba(120, 118, 117, 0.3);
+      margin: 5px 5px 2px 5px;
+      border-radius: 3px;
+      padding: 1px;
+      background-color: @bg;
+      color: @bg;
     }
 
     #taskbar button {
-      border-radius: 3px 3px 3px 3px;
-      padding: 0 0 0 3px;
-      margin: 3px 1;
-      color: #ffffff;
-      background-color: rgba(120, 118, 117, 0.1);
+      margin: 5px 5px;
+      border-radius: 3px;
+      padding-left: 3px;
+      padding-right: 9px;
+      background-color: @bg;
+      color: @fg;
     }
 
     #taskbar button.active {
-      background-color: rgba(120, 118, 117, 0.8);
+      background-color: @blue;
+      color: @bg;
+    }
+
+    #taskbar button.urgent {
+      color: @red;
+    }
+
+    #taskbar button:hover {
+      color: @bg;
     }
 
     #mode {
