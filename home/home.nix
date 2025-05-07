@@ -4,6 +4,7 @@
 
   imports = [
     ./shell/default.nix
+    ./themes/theme.nix
     ./packages.nix
     ./programs
     ./desktop

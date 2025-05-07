@@ -14,32 +14,6 @@ in
 {
   home.packages = gnomePackages ++ gnomeExtensions;
 
-  gtk = {
-    enable = true;
-    font.name = "Inter";
-    font.size = 11;
-  };
-
-  fonts = {
-    fontconfig = { 
-      enable = true;
-      defaultFonts = {
-        serif = [ "Inter" ];
-        sansSerif = [ "Inter" ];
-        monospace = [ "JetBrainsMono Nerd Font" ];
-      };
-    };
-  };
-
-  # Add environment variables to enforce dark theme
-  home.sessionVariables = {
-    GTK_THEME = "Adwaita:dark";
-    # Force Electron/Chromium apps to use dark mode
-    FORCE_DARK_MODE = "1";
-    # Force QT apps to match GTK theme
-    QT_QPA_PLATFORMTHEME = "gtk3";
-  };
-
   dconf = {
     enable = true;
     settings = {
@@ -128,7 +102,6 @@ in
 
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-        gtk-theme = "Adwaita-dark";
         icon-theme = "Adwaita";
         cursor-theme = "Bibata-Original-Classic";
       };
