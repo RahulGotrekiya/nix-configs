@@ -12,6 +12,22 @@
     "loglevel=3"
   ];
 
+  # Automatic updating
+  system.autoUpgrade = {
+    enable = true;
+    dates = "daily";
+  };
+
+  # Automatic cleaning
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 3d";
+    };
+    settings.auto-optimise-store = true;
+  };
+
   # Set time zone
   time.timeZone = "Asia/Kolkata";
 

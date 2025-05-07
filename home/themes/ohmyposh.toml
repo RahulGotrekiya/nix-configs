@@ -33,13 +33,6 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
-    template = '  ~ Update available '
-    foreground = 'yellow2'
-    background = 'transparent'
-    type = 'upgrade'
-    style = 'plain'
-
-  [[blocks.segments]]
     template = '<b>{{ .Path  }}</b>'
     foreground = 'p:blue'
     background = 'transperent'
