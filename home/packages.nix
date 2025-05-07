@@ -15,6 +15,11 @@
     alacritty
     tmux
 
+    # Password manager
+    pass
+    gnupg
+    pinentry
+
     # Other
     obsidian
     lazygit
