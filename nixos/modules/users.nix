@@ -13,6 +13,7 @@
     extraGroups = [ 
       "networkmanager"
       "wheel"
+      "docker"
       "input"     # Add input group for Kanata
       "uinput"    # Add uinput group for Kanata
     ];

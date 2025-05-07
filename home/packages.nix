@@ -27,6 +27,7 @@
     btop
     vscode
     libnotify
+    docker-compose
     
     # Fonts
     inter

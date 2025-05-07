@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   # Enable CUPS to print documents
@@ -32,6 +32,13 @@
     agent = {
       enable = true;
       enableSSHSupport = true;
+    };
+  };
+
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
     };
   };
 }
