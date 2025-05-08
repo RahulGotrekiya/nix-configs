@@ -14,6 +14,7 @@
       safe = {
         directory = [
           "/mnt/work/personal/Obsidian Vault"
+          "/mnt/work/study/Projects/PSDs/MacaulayTreeHouse"
         ];
       };
     };
