@@ -41,4 +41,18 @@
       enableOnBoot = true;
     };
   };
+
+  # syncthing for sync folder with pixel
+  services.syncthing = {
+    enable = true;
+    user = "rahul";
+    dataDir = "/mnt/work/media/sync";
+    openDefaultPorts = true;
+  };
+
+  # jellyfin
+  services.jellyfin = {
+    enable = true;
+    openFirewall = true;
+  };
 }
