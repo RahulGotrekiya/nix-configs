@@ -178,7 +178,7 @@
 
       "pulseaudio" = {
         format = "{icon}  {volume}%";
-        "format-bluetooth" = "    {volume}%";
+        "format-bluetooth" = "    {volume}%";
         "format-muted" = "<span foreground='#E67E80'>󰖁</span>  {volume}%";
         "on-click" = "pavucontrol";
         "on-click-right" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
