@@ -12,6 +12,7 @@
     ./kanata.nix
     ./nvidia.nix
     ./filesystems.nix
+    ./battery-monitor.nix
     ./desktop    
   ];
 }
