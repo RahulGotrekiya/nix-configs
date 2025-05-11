@@ -40,7 +40,6 @@ in
         { name = "zsh-users/zsh-syntax-highlighting"; } 
         { name = "zsh-users/zsh-autosuggestions"; } 
         { name = "zsh-users/zsh-completions"; }
-        { name = "zsh-users/zsh-autosuggestions"; }
         { name = "Aloxaf/fzf-tab"; }
       ];
     };
