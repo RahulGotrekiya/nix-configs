@@ -16,9 +16,6 @@
     # For power management
     powertop
 
-    # Notification daemon
-    mako
-    
     # Application launcher
     rofi-wayland
     

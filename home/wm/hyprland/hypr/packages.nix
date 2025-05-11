@@ -11,7 +11,6 @@
     cliphist
     hyprpaper
     pyprland
-    mako
     hyprpicker
     rofi-wayland
     brightnessctl

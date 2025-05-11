@@ -6,8 +6,7 @@
     ./hypr
     ./waybar
     ./scripts
-    # ./mako.nix
-    ./swaync.nix
+    ./swaync
   ];  
 }
 

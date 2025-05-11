@@ -5,7 +5,7 @@
   ...
 }: {
   services.mako = {
-    enable = true;
+    enable = false;
     font = "JetBrainsMono Nerd Font Regular 13";
     format = "<b>%a</b> <span color=\"#FF6AC1\">󰩃</span> \\n%s\\n%b";
     sort = "-time";
