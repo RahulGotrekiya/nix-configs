@@ -22,7 +22,7 @@
 
   # Automatic updating
   system.autoUpgrade = {
-    enable = true;
+    enable = false;
     dates = "daily";
   };
 

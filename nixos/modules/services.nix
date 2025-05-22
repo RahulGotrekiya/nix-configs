@@ -46,7 +46,7 @@
   services.syncthing = {
     enable = true;
     user = "rahul";
-    dataDir = "/mnt/work/media/sync";
+    dataDir = config.users.users.rahul.home + "/Sync";
     openDefaultPorts = true;
   };
 
