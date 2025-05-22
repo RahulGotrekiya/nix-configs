@@ -23,15 +23,16 @@
     @define-color black3 #1a1b26;
     @define-color maroon #db4b4b;
     @define-color yellow #e0af68;
+    @define-color soft-purple #b48ead;
 
     * {
       min-height: 0;
       margin: 0;
       padding: 0;
       border-radius: 3px;
-      /* font-family: "Space Grotesk"; */
-      font-family: "Bricolage Grotesque";
-      font-size: 14pt;
+      font-family: "Space Grotesk"; 
+      /* font-family: "Bricolage Grotesque"; */
+      font-size: 12pt;
       font-weight: 700;
       padding-bottom: 0px;
     }
@@ -98,12 +99,16 @@
       color: @bg;
     }
 
+    #workspaces button.active:hover {
+      color: @bg;
+    }
+
     #workspaces button.urgent {
       color: @red;
     }
 
     #workspaces button:hover {
-      color: @bg;
+      color: @soft-purple;
     }
 
     #custom-gpu-util {
@@ -117,7 +122,7 @@
 
     #custom-weather {
       margin: 5px 0px 2px 5px;
-      color: #b48ead;
+      color: @soft-purple;
       border-radius: 3px;
       background-color: @bg;
       padding: 0 10px 0 6px;
@@ -254,7 +259,7 @@
       border-radius: 3px;
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
-      color: #b48ead;
+      color: @soft-purple;
       background-color: @bg;
     }
 

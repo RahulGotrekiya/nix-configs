@@ -20,7 +20,7 @@
           disable_while_typing = true;
         };
         
-        sensitivity = 0.2; # -1.0 - 1.0, 0 means no modification.
+        sensitivity = 0.4; # -1.0 - 1.0, 0 means no modification.
       };
       
       # General configuration

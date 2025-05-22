@@ -29,6 +29,7 @@
     libnotify
     dysk
     docker-compose
+    youtube-music
     
     # Fonts
     inter

@@ -17,7 +17,7 @@
         # "memory"
         # "temperature"
         # "custom/gpu-temp"
-        "custom/gpu-util"
+        # "custom/gpu-util"
         "tray"
         "network"
         "pulseaudio"
