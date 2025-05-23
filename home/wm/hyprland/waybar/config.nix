@@ -33,7 +33,7 @@
       };
 
       "clock" = {
-        format = "<span foreground='#7aa2f7'>   </span><span>{:%I:%M %a %d}</span>";
+        format = "<span>   </span><span>{:%I:%M %a %d}</span>";
         tooltip-format = "{calendar}";
         calendar = {
           mode = "month";
@@ -53,7 +53,7 @@
           on-click-right = "shift_up";
           on-click = "shift_down";
         };
-        format-alt = "<span foreground='#89dceb'>  </span><span>{:%H:%M}</span>";
+        format-alt = "<span>   </span><span>{:%H:%M}</span>";
       };
 
       "cpu" = {

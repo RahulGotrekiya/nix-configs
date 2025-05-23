@@ -26,7 +26,7 @@
       # General configuration
       general = {
         gaps_in = 5;
-        gaps_out = 10;
+        gaps_out = 5;
         border_size = 0;
         "col.active_border" = "rgba(ca9ee6ff) rgba(f2d5cfff) 45deg";
         "col.inactive_border" = "rgba(b4befecc) rgba(6c7086cc) 45deg";

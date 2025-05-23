@@ -35,7 +35,13 @@
     inter
     pkgs.nerd-fonts.jetbrains-mono
     google-fonts
-    (google-fonts.override { fonts = [ "Bricolage Grotesque" ]; })
+    (google-fonts.override { 
+        fonts = [
+          "Bricolage Grotesque"
+          "Libre Baskerville" 
+        ];
+      }
+    )
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
