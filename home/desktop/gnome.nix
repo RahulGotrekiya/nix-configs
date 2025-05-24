@@ -4,11 +4,11 @@ let
   gnomePackages = with pkgs; [
     gnome-tweaks
     gnome-extension-manager
-    adwaita-icon-theme
   ];
 
   gnomeExtensions = with pkgs.gnomeExtensions; [
     blur-my-shell
+    user-themes
   ];
 in
 {
@@ -106,13 +106,8 @@ in
         cursor-theme = "Bibata-Original-Classic";
       };
 
-      "org/gnome/shell/extensions/user-theme" = {
+      "org/gnome/shell/extensions/user-themes" = {
         name = "Adwaita-dark"; 
-      };
-      
-      # Enable Num Lock on boot
-      "org/gnome/settings-daemon/peripherals/keyboard" = {
-        numlock-state = "on";
       };
       
       "org/gnome/shell" = {

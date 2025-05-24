@@ -18,10 +18,7 @@
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "GNOME";
     GDK_BACKEND = "wayland,x11";
-    NIXOS_OZONE_WL = "1";
-    XCURSOR_THEME = "Bibata-Original-Classic";
-    XCURSOR_SIZE = "24";
-  };
+};
 
   services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
     [org.gnome.shell]
