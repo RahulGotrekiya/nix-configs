@@ -14,5 +14,6 @@
     ./filesystems.nix
     ./battery-monitor.nix
     ./desktop    
+    ./lamp.nix
   ];
 }
