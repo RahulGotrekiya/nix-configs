@@ -4,6 +4,7 @@ let
   grep = pkgs.gnugrep;
   desiredFlatpaks = [
     "org.videolan.VLC"
+    "app.zen_browser.zen"
   ];
 in {
   services.flatpak.enable = true;
