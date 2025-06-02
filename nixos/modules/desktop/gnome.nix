@@ -1,12 +1,12 @@
 { config, pkgs, lib, ... }:
 
 {
-  services.xserver.displayManager.gdm = {
+  services.displayManager.gdm = {
     enable = true;
     wayland = true;
   };
 
-  services.xserver.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = true;
   services.accounts-daemon.enable = true;
   
   services.gnome = {
@@ -20,7 +20,7 @@
     GDK_BACKEND = "wayland,x11";
 };
 
-  services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+  services.desktopManager.gnome.extraGSettingsOverrides = ''
     [org.gnome.shell]
     welcome-dialog-last-shown-version='9999999999'
     [org.gnome.desktop.interface]
