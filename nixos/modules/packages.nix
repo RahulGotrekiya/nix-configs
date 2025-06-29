@@ -12,6 +12,7 @@
     tree
     vscodium
     bibata-cursors
+    dosbox
   ];
 
   # Install firefox.
