@@ -15,6 +15,7 @@
         directory = [
           "/mnt/work/personal/Obsidian Vault"
           "/mnt/work/study/Projects/PSDs/MacaulayTreeHouse"
+          "/mnt/work/study/material/Courses/00 Practice/JavaScript/complete-javascript-course-master/js-small-projects"
         ];
       };
     };

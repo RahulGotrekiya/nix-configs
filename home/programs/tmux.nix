@@ -18,10 +18,10 @@
             set -g @tokyo-night-tmux_battery_low_threshold 21
             set -g @tokyo-night-tmux_show_hostname 0
             set -g @tokyo-night-tmux_show_datetime 0
-            set -g @tokyo-night-tmux_show_path 1
+            set -g @tokyo-night-tmux_show_path 0
             set -g @tokyo-night-tmux_path_format relative
             set -g @tokyo-night-tmux_window_id_style fsquare
-            set -g @tokyo-night-tmux_show_git 1
+            set -g @tokyo-night-tmux_show_git 0
           '';
         }
         sensible

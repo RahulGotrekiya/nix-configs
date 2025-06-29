@@ -8,5 +8,6 @@
     ./tmux.nix
     ./kitty.nix
     ./kanata.nix
+    ./yazi.nix
   ];
 }
