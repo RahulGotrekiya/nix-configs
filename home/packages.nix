@@ -31,6 +31,9 @@
     docker-compose
     youtube-music
     
+    # Nodejs
+    nodejs
+        
     # Fonts
     inter
     pkgs.nerd-fonts.jetbrains-mono

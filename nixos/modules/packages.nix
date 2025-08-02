@@ -13,6 +13,7 @@
     vscodium
     bibata-cursors
     dosbox
+    gcc
   ];
 
   # Install firefox.

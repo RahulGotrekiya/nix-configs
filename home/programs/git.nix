@@ -16,6 +16,10 @@
           "/mnt/work/personal/Obsidian Vault"
           "/mnt/work/study/Projects/PSDs/MacaulayTreeHouse"
           "/mnt/work/study/material/Courses/00 Practice/JavaScript/complete-javascript-course-master/js-small-projects"
+          "/mnt/work/study/Projects/php-root/clg/mow"
+          "/mnt/work/study/Projects/snake-game"
+          "/mnt/work/study/Projects/nixpkgs"
+          "~/tc/BIN/PROJECT/chat/"
         ];
       };
     };
